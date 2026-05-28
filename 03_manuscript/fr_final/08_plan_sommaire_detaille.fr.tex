@@ -1,0 +1,371 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\setlist[itemize]{leftmargin=1.4em, itemsep=0.2em}
+\setlist[enumerate]{leftmargin=1.6em, itemsep=0.2em}
+
+\definecolor{accent}{HTML}{1F5F6B}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  pdftitle={Plan detaille du rapport de stage},
+  pdfauthor={Ke Muchen}
+}
+
+\titleformat{\section}{\Large\bfseries\color{accent}}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0.8em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{0.8em}{}
+
+\title{
+  \textbf{Plan / Sommaire détaillé}\\
+  \large Rapport de stage
+}
+\author{
+  Master Ville et Environnement, parcours GEOPRAD\\
+  Université Côte d'Azur\\
+  Direction de l'Urbanisme -- Mairie d'Antibes Juan-les-Pins
+}
+\date{Stage du 1er avril 2026 au 1er juillet 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+\textbf{Titre provisoire}\\[0.4em]
+\emph{De l'analyse socio-thermique à l'épreuve du terrain : comment l'ingénierie territoriale compose-t-elle avec l'urgence climatique et les hyper-contraintes d'un centre ancien ?}
+\end{center}
+
+\tableofcontents
+\newpage
+
+\section*{Positionnement du rapport}
+\addcontentsline{toc}{section}{Positionnement du rapport}
+
+Ce rapport est d'abord un rapport de stage : il doit rendre compte d'une expérience professionnelle, des missions confiées, des compétences acquises et d'un regard réflexif sur la structure d'accueil. Cependant, le stage comporte une forte dimension d'analyse et de recherche appliquée. Le document adopte donc une forme hybride : \emph{rapport de stage avec dimension de mémoire intégré}.
+
+Le fil conducteur n'est pas une simple succession de tâches. Il s'agit de montrer comment différentes missions -- diagnostic socio-démographique par SIG, travail sur des pièces de commande publique, participation à des réunions de projets urbains et exploration méthodologique du confort thermique -- permettent de comprendre les conditions concrètes de l'adaptation climatique dans un centre ancien méditerranéen.
+
+\section*{Structure générale}
+\addcontentsline{toc}{section}{Structure générale}
+
+\begin{enumerate}
+  \item Introduction générale.
+  \item Partie I -- Construire le problème : structure d'accueil, territoire, état de l'art et problématique.
+  \item Partie II -- L'expérience du stage : missions, méthodes, données et productions.
+  \item Partie III -- Analyse critique : de la commande publique aux données fines du confort thermique.
+  \item Partie IV -- Bilan réflexif et perspectives professionnelles.
+  \item Conclusion générale.
+  \item Bibliographie et annexes.
+\end{enumerate}
+
+\section{Pages liminaires}
+
+\subsection{Page de couverture}
+\textbf{Contenu attendu.} La couverture indiquera l'université, le master, le parcours, le titre du rapport, la structure d'accueil, les dates du stage, le nom de l'étudiante et, si cela est retenu, les noms du tuteur professionnel et du tuteur universitaire.
+
+\textbf{Matériaux à mobiliser.} Convention de stage, informations officielles de l'Université Côte d'Azur, informations de la Direction de l'Urbanisme.
+
+\subsection{Remerciements}
+\textbf{Contenu attendu.} Remerciements courts et professionnels adressés à la structure d'accueil, aux encadrants, aux collègues et à l'équipe pédagogique.
+
+\textbf{Matériaux à mobiliser.} Noms et fonctions à confirmer avant rédaction finale.
+
+\subsection{Sommaire}
+\textbf{Contenu attendu.} Sommaire final du rapport. Les pages seront ajustées après mise en page.
+
+\subsection{Liste des figures, cartes et tableaux}
+\textbf{Contenu attendu.} Cette liste relève des pages liminaires et se place avant le corps du rapport. Elle recensera les cartes, figures et tableaux réellement intégrés : localisation d'Antibes, cartes socio-démographiques, comparaisons territoriales, schéma de la chaîne CCTP/DCE, schéma de la méthode GVI/SVF.
+
+\textbf{Matériaux à mobiliser.} Dossier \texttt{D:\textbackslash 1xuexi\textbackslash antibe}, dossier \texttt{carto\_pop}, fichier \texttt{04\_figures/captions.md}.
+
+\subsection{Liste des abréviations}
+\textbf{Contenu attendu.} Cette liste se place également dans les pages liminaires. Elle définira notamment SIG, CCTP, CCAP, SPR, ABF, PLU, IRIS, INSEE, GVI, SVF, ICU, LCZ.
+
+\textbf{Matériaux à mobiliser.} Fichier \texttt{01\_sources/data\_dictionary.md}.
+
+\section{Introduction générale}
+
+\textbf{Rôle de l'introduction.} L'introduction ne doit pas développer l'ensemble du contexte territorial ni l'état de l'art. Elle sert à ouvrir le sujet, présenter le cadre du stage, formuler la problématique et annoncer le plan. Les développements détaillés sur Antibes, le centre ancien et la littérature seront placés dans la Partie I.
+
+\subsection{Accroche : Antibes face à une double exigence}
+\textbf{Contenu attendu.} Introduire brièvement Antibes comme ville méditerranéenne, touristique et patrimoniale confrontée aux enjeux de confort d'été et d'adaptation climatique. Mettre en évidence une tension initiale : l'adaptation climatique appelle des transformations concrètes, mais le centre ancien impose des marges d'action réduites.
+
+\textbf{Matériaux à mobiliser.} PLU d'Antibes, étude socio-démographique, observations de stage, cartes de localisation.
+
+\subsection{Cadre du stage}
+\textbf{Contenu attendu.} Présenter la structure d'accueil, la période du stage et le positionnement de l'étudiante comme \emph{stagiaire chargée d'études urbaines et SIG}. Lister très brièvement les missions : diagnostic socio-démographique par SIG, CCTP/CCAP, participation à des réunions de projets urbains et techniques, démarche exploratoire sur le confort thermique.
+
+\textbf{Matériaux à mobiliser.} Convention de stage, documents internes non confidentiels, inventaire des sources.
+
+\subsection{Problématique}
+\textbf{Formulation provisoire.} \emph{Comment l'ingénierie territoriale locale peut-elle articuler diagnostic socio-spatial, commande publique et outils d'analyse du confort thermique pour adapter un centre ancien méditerranéen aux enjeux climatiques ?}
+
+\textbf{Contenu attendu.} Montrer que cette problématique émerge progressivement des missions : le SIG rend visibles des différenciations socio-spatiales ; le CCTP/CCAP montre la traduction contractuelle des objectifs ; les réunions révèlent la fabrique locale des projets ; les méthodes de confort thermique soulignent les limites des données macroscopiques.
+
+\subsection{Annonce du plan}
+\textbf{Contenu attendu.} Présenter les quatre grandes parties : construction du problème, expérience de stage, analyse critique, bilan réflexif.
+
+\section{Partie I -- Construire le problème : structure d'accueil, territoire, état de l'art et problématique}
+
+\textbf{Objectif de la partie.} Cette partie pose le socle du rapport. Elle répond à quatre questions : où se déroule le stage ? Pourquoi Antibes constitue-t-elle un terrain pertinent ? Comment la littérature aide-t-elle à comprendre le problème ? Comment la problématique finale se construit-elle ?
+
+\subsection{Chapitre 1 -- La structure d'accueil : la Direction de l'Urbanisme d'Antibes Juan-les-Pins}
+
+\subsubsection{1.1 Identité institutionnelle et rôle de la mairie}
+\textbf{Contenu attendu.} Présenter la commune d'Antibes Juan-les-Pins et le rôle de la mairie comme acteur de l'action publique locale. Situer la Direction de l'Urbanisme dans le cycle de production urbaine : planification, projets, coordination, instruction et relation aux partenaires.
+
+\textbf{Matériaux à mobiliser.} Informations institutionnelles, PLU, documents de projet de territoire.
+
+\subsubsection{1.2 Organisation et missions de la Direction de l'Urbanisme}
+\textbf{Contenu attendu.} Décrire les principales missions du service : planification, projets urbains, documents réglementaires, accompagnement des opérations et coordination avec d'autres services ou partenaires. Rester prudent si l'organigramme n'est pas complètement stabilisé.
+
+\textbf{Matériaux à mobiliser.} Observations de stage, documents de cadrage, CCTP projet de territoire.
+
+\subsubsection{1.3 Positionnement de la stagiaire}
+\textbf{Contenu attendu.} Expliquer le positionnement comme stagiaire chargée d'études urbaines et SIG, à l'interface entre production de données, compréhension des projets urbains et recherche appliquée.
+
+\textbf{Matériaux à mobiliser.} Missions confiées, journal de stage, productions personnelles.
+
+\subsection{Chapitre 2 -- Antibes Juan-les-Pins : un territoire méditerranéen sous tensions}
+
+\subsubsection{2.1 Un territoire attractif et touristique}
+\textbf{Contenu attendu.} Présenter Antibes dans son ensemble : ville littorale, touristique, méditerranéenne, soumise à une forte intensité d'usages, notamment estivale. Relier cette attractivité à la question du confort d'été dans les espaces publics.
+
+\textbf{Matériaux à mobiliser.} PLU, étude socio-démographique, données INSEE, documents touristiques ou territoriaux si disponibles.
+
+\subsubsection{2.2 Une structure démographique et sociale différenciée}
+\textbf{Contenu attendu.} Introduire les grands traits démographiques et sociaux : vieillissement, ménages d'une personne, revenus, résidences secondaires, contrastes internes. Ne pas faire ici l'analyse SIG détaillée, mais préparer le terrain pour la Partie II.
+
+\textbf{Matériaux à mobiliser.} Étude socio-démographique 2026, INSEE, données IRIS, tableaux Excel, données fiscales.
+
+\subsubsection{2.3 Le centre ancien : un espace patrimonial et opérationnellement contraint}
+\textbf{Contenu attendu.} Passer de l'échelle communale au Vieux Antibes. Présenter le centre ancien comme espace patrimonial, dense, déjà construit, touristique et fortement contraint. Le SPR, l'ABF, les servitudes ou les réseaux ne doivent pas être présentés comme une mission autonome, mais comme un cadre d'action.
+
+\textbf{Matériaux à mobiliser.} PLU, CCTP PLU/SPR, documents patrimoniaux, observations de stage.
+
+\subsubsection{2.4 Guynemer et Cours Masséna comme terrains opérationnels}
+\textbf{Contenu attendu.} Présenter le projet de \emph{requalification du secteur Guynemer et du cours Masséna dans le centre ancien d'Antibes}. Montrer pourquoi ces espaces constituent des terrains concrets pour observer la traduction opérationnelle d'objectifs urbains et climatiques.
+
+\textbf{Matériaux à mobiliser.} CCAP/CCTP Guynemer-Masséna, plans, cartes, observations.
+
+\subsection{Chapitre 3 -- État de l'art : action publique locale, urbanisme opérationnel et micro-adaptation climatique}
+
+\textbf{Objectif du chapitre.} L'état de l'art doit être structuré par la question du stage. Le cadre principal sera celui de l'action publique locale sous contraintes, de l'urbanisme opérationnel et de la micro-adaptation climatique dans le Vieux Antibes. Les références strictement thermiques (ICU, GVI, SVF, PET/UTCI) viennent compléter cette trame, sans la remplacer.
+
+\subsubsection{3.1 Action publique locale sous contraintes foncières, juridiques et budgétaires}
+\textbf{Contenu attendu.} Montrer que l'action publique locale ne disparaît pas, mais que ses leviers se déplacent. Développer la sobriété foncière, le ZAN, la rareté du foncier, les contraintes financières et la nécessité de prioriser les interventions.
+
+\textbf{Matériaux à mobiliser.} Ministère de la Transition écologique sur le ZAN, OFGL 2025, portail de l'artificialisation, note bilingue fournie par l'utilisatrice.
+
+\subsubsection{3.2 Spécificités méditerranéennes, centre ancien et empilement normatif}
+\textbf{Contenu attendu.} Situer le Vieux Antibes comme espace littoral, patrimonial, déjà construit et exposé aux enjeux climatiques. Décrire l'empilement PLU/PLUi, SCoT, ZAN, SPR, PSMV/PVAP, PCAET, ABF et commande publique.
+
+\textbf{Matériaux à mobiliser.} Ministère de la Culture sur les SPR, PLU Antibes 2019, CCTP PLU/SPR, sources institutionnelles climatiques.
+
+\subsubsection{3.3 Urbanisme opérationnel, commande publique et traduction contractuelle}
+\textbf{Contenu attendu.} Expliquer comment les objectifs urbains et climatiques deviennent opposables et réalisables par les instruments opérationnels : programme, DCE, CCTP, CCAP, maîtrise d'oeuvre, critères, réception. Développer l'idée que si l'objectif climatique ne rentre pas dans les pièces contractuelles, il reste rhétorique.
+
+\textbf{Matériaux à mobiliser.} Portail officiel de la commande publique, guides DAJ, textes sur la maîtrise d'oeuvre publique, CCTP/CCAP Guynemer-Masséna.
+
+\subsubsection{3.4 Micro-adaptation climatique, données fines et confort piéton}
+\textbf{Contenu attendu.} Montrer pourquoi, dans un centre ancien, l'échelle pertinente est souvent la rue, la placette, la façade ou le cheminement piéton. Présenter les limites des données agrégées et les apports possibles du GVI, SVF, LiDAR, street view, NDVI, PET/UTCI.
+
+\textbf{Matériaux à mobiliser.} ADEME \emph{Plus fraîche ma ville}, CEREMA/ADEME, Oke, Johansson, Nikolopoulou et Steemers, Li et al., Rzotkiewicz et al., dossiers \texttt{comforte thermique} et \texttt{confort-thermique-test}.
+
+\subsubsection{3.5 Synthèse critique de l'état de l'art}
+\textbf{Contenu attendu.} Conclure que le problème d'Antibes n'est pas l'impuissance locale, mais le rétrécissement de l'espace de manoeuvre. Les capacités décisives deviennent la priorisation, la coordination, la contractualisation, la micro-intervention et l'évaluation.
+
+\textbf{Matériaux à mobiliser.} Note bilingue d'état de l'art, synthèse des sous-sections précédentes.
+
+\subsection{Chapitre 4 -- Construction de la problématique}
+
+\subsubsection{4.1 Du contexte de stage à la question centrale}
+\textbf{Contenu attendu.} Montrer que la problématique est issue du stage lui-même : données socio-spatiales, commande publique, réunions de projets et exploration méthodologique du confort thermique.
+
+\subsubsection{4.2 Problématique retenue}
+\textbf{Contenu attendu.} Reprendre et éventuellement affiner la formulation problématique.
+
+\subsubsection{4.3 Axes d'analyse}
+\textbf{Contenu attendu.} Ne pas formuler d'hypothèses strictes, mais trois axes : rôle du diagnostic socio-spatial ; traduction par la commande publique ; apport des données fines de confort thermique.
+
+\section{Partie II -- L'expérience du stage : missions, méthodes, données et productions}
+
+\textbf{Objectif de la partie.} Présenter les missions réalisées en montrant pour chacune ce qui a été fait, avec quels outils, quelles productions, et ce que la mission révèle sur la pratique de l'urbanisme local.
+
+\subsection{Chapitre 5 -- Mission 1 : diagnostic socio-démographique par SIG}
+
+\subsubsection{5.1 Objectifs de la mission}
+Expliquer que le diagnostic vise à comprendre la structure socio-démographique d'Antibes, ses différenciations spatiales et ses possibles vulnérabilités.
+
+\subsubsection{5.2 Données utilisées et échelles d'analyse}
+Présenter INSEE, IRIS, données fiscales, quartiers, comparaisons communales et départementales. Insister sur l'intérêt et les limites de chaque échelle.
+
+\subsubsection{5.3 Méthode SIG et traitements réalisés}
+Décrire les traitements : nettoyage de données, jointures, indicateurs, cartographie, comparaisons. Mentionner QGIS ou ArcGIS selon les outils effectivement utilisés.
+
+\subsubsection{5.4 Principaux résultats}
+Présenter les résultats utiles au fil conducteur : vieillissement, ménages isolés, contrastes sociaux, structures comparées, secteurs à surveiller.
+
+\subsubsection{5.5 Apports et limites de la mission}
+Discuter la force du SIG pour rendre visibles les différenciations et ses limites : IRIS trop agrégé, prudence d'interprétation des données fiscales, absence de mesure directe du confort thermique.
+
+\subsection{Chapitre 6 -- Mission 2 : CCTP/CCAP pour Guynemer et Cours Masséna}
+
+\subsubsection{6.1 Comprendre le rôle du CCTP et du CCAP}
+Expliquer la distinction entre clauses techniques et clauses administratives, ainsi que leur rôle dans la commande publique.
+
+\subsubsection{6.2 Le projet de requalification du secteur Guynemer et du cours Masséna}
+Présenter le projet, son périmètre et ses enjeux urbains : qualité de l'espace public, usages, piétonnisation, adaptation climatique, patrimoine.
+
+\subsubsection{6.3 Participation au travail de rédaction et d'analyse}
+Décrire la contribution : lecture de CCTP, analyse comparative, préparation ou amélioration de contenus, compréhension de la structure contractuelle. Ne pas surestimer le degré d'autonomie.
+
+\subsubsection{6.4 Ce que cette mission révèle sur l'urbanisme opérationnel}
+Montrer que le CCTP/CCAP n'est pas un simple document administratif, mais un lieu de traduction entre objectifs, contraintes, responsabilités et faisabilité.
+
+\subsection{Chapitre 7 -- Mission 3 : participation aux réunions de projets urbains et techniques}
+
+\subsubsection{7.1 Nature des réunions suivies}
+Présenter de manière générale les réunions de projets urbains et techniques, notamment autour d'infrastructures énergétiques, sans détailler d'éléments confidentiels.
+
+\subsubsection{7.2 Comprendre la fabrique locale des projets}
+Montrer que les projets se fabriquent par coordination entre services, contraintes techniques, temporalités, budgets et arbitrages.
+
+\subsubsection{7.3 Apports professionnels de cette participation}
+Décrire les compétences d'écoute, de compréhension des procédures, de langage professionnel et de coordination acquises.
+
+\subsection{Chapitre 8 -- Mission 4 : démarche exploratoire sur le confort thermique piéton}
+
+\subsubsection{8.1 Origine de la démarche}
+Expliquer pourquoi les missions précédentes conduisent à s'intéresser aux données fines et au confort piéton.
+
+\subsubsection{8.2 Données et outils envisagés ou partiellement mobilisés}
+Présenter street view, IA, GVI, SVF, LiDAR, en précisant qu'il s'agit d'une démarche exploratoire partiellement mise en oeuvre.
+
+\subsubsection{8.3 Méthode générale}
+Décrire la logique de collecte, de segmentation, de calcul d'indicateurs et de croisement avec les données morphologiques.
+
+\subsubsection{8.4 Premiers apports et limites}
+Présenter les apports : finesse spatiale, perception piétonne, priorisation. Présenter les limites : images datées, erreurs IA, validation terrain nécessaire, données météorologiques manquantes.
+
+\section{Partie III -- Analyse critique : de la commande publique aux données fines du confort thermique}
+
+\textbf{Objectif de la partie.} Ne pas répéter les missions, mais en tirer une analyse transversale sur la manière dont l'ingénierie territoriale agit dans un contexte contraint.
+
+\subsection{Chapitre 9 -- Le diagnostic territorial comme point de départ de l'action}
+
+\subsubsection{9.1 Ce que le SIG rend visible}
+Analyser la capacité du SIG à objectiver les différenciations territoriales et sociales.
+
+\subsubsection{9.2 Ce que le SIG ne suffit pas à montrer}
+Montrer les limites du diagnostic agrégé pour la décision fine à l'échelle de la rue.
+
+\subsection{Chapitre 10 -- La commande publique comme traduction opérationnelle}
+
+\subsubsection{10.1 Du projet politique au document technique}
+Analyser le passage de l'objectif politique à l'écriture opérationnelle.
+
+\subsubsection{10.2 Les tensions entre ambition, faisabilité et temporalité}
+Discuter les arbitrages entre ambitions climatiques, budgets, délais, contraintes patrimoniales et exécution.
+
+\subsection{Chapitre 11 -- Pourquoi l'échelle piétonne devient centrale}
+
+\subsubsection{11.1 Les limites des données macroscopiques pour l'action locale}
+Discuter les limites des indicateurs larges pour une opération de centre ancien.
+
+\subsubsection{11.2 GVI, SVF et IA comme outils complémentaires}
+Montrer que ces outils peuvent aider à prioriser, sans remplacer le terrain ni la décision politique.
+
+\subsubsection{11.3 Une ingénierie territoriale par ajustements successifs}
+Synthétiser l'idée centrale : l'ingénierie territoriale compose avec les contraintes par diagnostics, documents, réunions, arbitrages et micro-interventions.
+
+\section{Partie IV -- Bilan réflexif et perspectives professionnelles}
+
+\textbf{Objectif de la partie.} Proposer une réflexion personnelle et professionnelle, indispensable dans un rapport de stage.
+
+\subsection{Chapitre 12 -- Compétences acquises}
+
+\subsubsection{12.1 Compétences techniques}
+SIG, analyse socio-démographique, lecture de CCTP/CCAP, méthodes exploratoires GVI/SVF/LiDAR.
+
+\subsubsection{12.2 Compétences professionnelles}
+Compréhension du fonctionnement d'une collectivité, réunions, coordination, temporalités de projet, écriture opérationnelle.
+
+\subsection{Chapitre 13 -- Regard critique sur le stage}
+
+\subsubsection{13.1 Les apports du stage}
+Montrer la richesse du stage : données, commande publique, réunions, recherche appliquée.
+
+\subsubsection{13.2 Les limites rencontrées}
+Mentionner la durée limitée du stage, l'inachèvement partiel de la démarche thermique, les limites de données et les contraintes de confidentialité.
+
+\subsubsection{13.3 Ce que cette expérience change dans ma compréhension de l'urbanisme}
+Expliquer l'évolution du regard : l'urbanisme est un travail d'assemblage entre connaissance, procédure, contrat, technique et arbitrage.
+
+\subsection{Chapitre 14 -- Perspectives professionnelles}
+
+\subsubsection{14.1 Approfondir le lien entre SIG, données et action publique}
+Développer l'intérêt pour les méthodes d'aide à la décision territoriale.
+
+\subsubsection{14.2 Approfondir les méthodes de confort thermique urbain}
+Poursuivre GVI, SVF, LiDAR, PET/UTCI, éventuellement modélisation microclimatique.
+
+\subsubsection{14.3 Se positionner comme profil hybride}
+Se présenter comme un profil associant urbanisme, SIG, adaptation climatique, données et compréhension de l'action publique locale.
+
+\section{Conclusion générale}
+
+\subsection{Réponse à la problématique}
+Répondre en montrant que l'ingénierie territoriale articule diagnostic, commande publique, coordination et données fines, mais toujours dans un cadre de contraintes.
+
+\subsection{Synthèse des apports du stage}
+Rappeler les apports du SIG, du CCTP/CCAP, des réunions de projets et de la démarche GVI/SVF.
+
+\subsection{Ouverture}
+Situer Antibes dans une problématique plus large des centres anciens méditerranéens confrontés à l'adaptation climatique.
+
+\section{Bibliographie}
+
+\textbf{Structure provisoire.}
+\begin{itemize}
+  \item Action publique locale, foncier, ZAN et finances locales.
+  \item Urbanisme opérationnel, commande publique, CCTP/CCAP.
+  \item Patrimoine, SPR, centres anciens et contraintes normatives.
+  \item Adaptation climatique, rafraîchissement urbain et micro-adaptation.
+  \item Confort thermique, GVI, SVF, LiDAR, street view et indicateurs.
+  \item Sources locales et institutionnelles : PLU, INSEE, CEREMA, ADEME, OFGL, HCC.
+\end{itemize}
+
+\section{Annexes}
+
+\subsection{Annexe 1 -- Liste des principales sources utilisées}
+Inventaire des sources locales, institutionnelles et bibliographiques.
+
+\subsection{Annexe 2 -- Indicateurs socio-démographiques}
+Définition des indicateurs utilisés dans le diagnostic SIG.
+
+\subsection{Annexe 3 -- Exemples de cartes ou tableaux SIG}
+Cartes et tableaux validés pour diffusion.
+
+\subsection{Annexe 4 -- Principe méthodologique GVI/SVF}
+Schéma de la démarche street view, IA, GVI, SVF/LiDAR.
+
+\subsection{Annexe 5 -- Extraits ou synthèse de documents de commande publique}
+Extraits non confidentiels ou résumé de structure des CCTP/CCAP.
+
+\end{document}

@@ -20,6 +20,12 @@
 .\scripts\build_docx.cmd
 ```
 
+Pour générer le plan détaillé en PDF depuis LaTeX :
+
+```powershell
+.\scripts\build_latex_plan.cmd
+```
+
 6. Synchroniser avec GitHub :
 
 ```powershell
