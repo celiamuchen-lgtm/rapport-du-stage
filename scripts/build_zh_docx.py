@@ -1,5 +1,6 @@
 from pathlib import Path
 import re
+import argparse
 
 from docx import Document
 from docx.enum.section import WD_SECTION
@@ -12,8 +13,8 @@ from docx.shared import Cm, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = ROOT / "03_manuscript" / "zh_working" / "09_rapport_stage_premier_jet.zh.md"
-OUT = ROOT / "06_outputs" / "09_rapport_stage_premier_jet.zh.docx"
+DEFAULT_SRC = ROOT / "03_manuscript" / "zh_working" / "09_rapport_stage_premier_jet.zh.md"
+DEFAULT_OUT = ROOT / "06_outputs" / "09_rapport_stage_premier_jet.zh.docx"
 
 BODY_FONT = "SimSun"
 HEAD_FONT = "Microsoft YaHei"
@@ -210,8 +211,15 @@ def add_table(doc, table_lines):
 
 
 def main():
-    OUT.parent.mkdir(exist_ok=True)
-    lines = SRC.read_text(encoding="utf-8").splitlines()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--src", type=Path, default=DEFAULT_SRC)
+    parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    args = parser.parse_args()
+    src = args.src if args.src.is_absolute() else ROOT / args.src
+    out = args.out if args.out.is_absolute() else ROOT / args.out
+
+    out.parent.mkdir(exist_ok=True)
+    lines = src.read_text(encoding="utf-8").splitlines()
 
     doc = Document()
     section = doc.sections[0]
@@ -284,8 +292,8 @@ def main():
         add_paragraph(doc, raw)
 
     flush_table()
-    doc.save(OUT)
-    print(f"Generated: {OUT}")
+    doc.save(out)
+    print(f"Generated: {out}")
 
 
 if __name__ == "__main__":
