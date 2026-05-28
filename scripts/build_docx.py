@@ -7,17 +7,18 @@ from docx.shared import Pt
 
 ROOT = Path(__file__).resolve().parents[1]
 MANUSCRIPT = ROOT / "03_manuscript"
+FR_FINAL = MANUSCRIPT / "fr_final"
 OUTPUTS = ROOT / "06_outputs"
 
 CHAPTERS = [
-    "00_front_matter.md",
-    "01_introduction.md",
-    "02_partie_1_structure_territoire.md",
-    "03_partie_2_missions.md",
-    "04_partie_3_analyse_innovation.md",
-    "05_partie_4_bilan.md",
-    "06_conclusion.md",
-    "07_bibliographie.md",
+    "00_front_matter.fr.md",
+    "01_introduction.fr.md",
+    "02_partie_1_structure_territoire.fr.md",
+    "03_partie_2_missions.fr.md",
+    "04_partie_3_analyse_innovation.fr.md",
+    "05_partie_4_bilan.fr.md",
+    "06_conclusion.fr.md",
+    "07_bibliographie.fr.md",
 ]
 
 
@@ -60,7 +61,7 @@ def main():
 
     pieces = []
     for name in CHAPTERS:
-        path = MANUSCRIPT / name
+        path = FR_FINAL / name
         pieces.append(path.read_text(encoding="utf-8").strip())
 
     full = "\n\n".join(pieces) + "\n"

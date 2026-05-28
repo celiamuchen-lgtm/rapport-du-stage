@@ -35,14 +35,24 @@ rapport du stage/
     method_notes/
     writing_notes/
   03_manuscript/
-    00_front_matter.md
-    01_introduction.md
-    02_partie_1_structure_territoire.md
-    03_partie_2_missions.md
-    04_partie_3_analyse_innovation.md
-    05_partie_4_bilan.md
-    06_conclusion.md
-    07_bibliographie.md
+    zh_working/
+      00_front_matter.zh.md
+      01_introduction.zh.md
+      02_partie_1_structure_territoire.zh.md
+      03_partie_2_missions.zh.md
+      04_partie_3_analyse_innovation.zh.md
+      05_partie_4_bilan.zh.md
+      06_conclusion.zh.md
+      07_bibliographie.zh.md
+    fr_final/
+      00_front_matter.fr.md
+      01_introduction.fr.md
+      02_partie_1_structure_territoire.fr.md
+      03_partie_2_missions.fr.md
+      04_partie_3_analyse_innovation.fr.md
+      05_partie_4_bilan.fr.md
+      06_conclusion.fr.md
+      07_bibliographie.fr.md
     report_full.md
   04_figures/
     README.md
@@ -61,6 +71,8 @@ rapport du stage/
 ## Convention de nommage
 
 - Fichiers du manuscrit : `NN_nom_court.md`.
+- Brouillon chinois : suffixe `.zh.md`.
+- Version française : suffixe `.fr.md`.
 - Figures finales : `fig_XX_description_courte.ext`.
 - Annexes : `annexe_X_description_courte.ext`.
 - Notes : `YYYY-MM-DD_sujet.md` si elles sont datées.
@@ -92,3 +104,12 @@ Git ne suit pas :
 - les fichiers Word/PDF générés dans `06_outputs/`.
 
 Si un document source doit être archivé dans Git, le mettre d'abord dans un dossier dédié et vérifier sa taille, ses droits et sa confidentialité.
+
+## Bilingual Writing Policy
+
+The project is bilingual by design:
+
+- Chinese files in `03_manuscript/zh_working/` are the user's working draft and thinking space.
+- French files in `03_manuscript/fr_final/` are the academic submission version.
+- The DOCX build script uses the French files by default.
+- When the Chinese version changes, the French version should be updated afterward instead of editing the final French text blindly.

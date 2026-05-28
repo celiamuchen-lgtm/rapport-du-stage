@@ -8,17 +8,19 @@
 .\scripts\status.cmd
 ```
 
-2. Rédiger dans `03_manuscript/`.
+2. Rédiger ou corriger en chinois dans `03_manuscript/zh_working/`.
 
-3. Mettre à jour les notes ou l'inventaire des sources si une nouvelle preuve est utilisée.
+3. Traduire/réécrire en français académique dans `03_manuscript/fr_final/`.
 
-4. Générer un DOCX de contrôle :
+4. Mettre à jour les notes ou l'inventaire des sources si une nouvelle preuve est utilisée.
+
+5. Générer un DOCX de contrôle :
 
 ```powershell
 .\scripts\build_docx.cmd
 ```
 
-5. Synchroniser avec GitHub :
+6. Synchroniser avec GitHub :
 
 ```powershell
 .\scripts\sync.cmd
@@ -26,7 +28,8 @@
 
 ## Règles de rédaction
 
-- Écrire le texte principal en français académique.
+- Utiliser le chinois pour réfléchir, corriger et préciser les idées dans `zh_working`.
+- Utiliser le français académique pour la version à remettre dans `fr_final`.
 - Garder une phrase directrice par section : que doit démontrer cette section ?
 - Ne pas citer un document local sans l'ajouter dans `01_sources/source_inventory.md`.
 - Pour chaque figure utilisée, renseigner `04_figures/captions.md`.
@@ -44,7 +47,7 @@
 
 Le script `build_docx.cmd` appelle `build_docx.ps1`, qui :
 
-1. concatène les chapitres Markdown ;
+1. concatène les chapitres Markdown de `03_manuscript/fr_final/` ;
 2. écrit `03_manuscript/report_full.md` ;
 3. génère `06_outputs/rapport_stage_antibes_draft.docx` avec `python-docx`.
 
