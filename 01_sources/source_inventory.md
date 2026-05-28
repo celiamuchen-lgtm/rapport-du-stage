@@ -7,6 +7,7 @@ This file records where source materials live. Large files are not copied into G
 | Source | Type | Location | Use |
 |---|---|---|---|
 | Rapport du stage Google Doc | Google Docs plan/reference | https://docs.google.com/document/d/1nN0OSHZyrCuEnS2yWs8HGMHde6sE5HG41sbx2CrxkA4/edit?usp=sharing | Existing plan and structure reference |
+| État de l'art bilingue on local public action | Conversation-provided working note | `02_notes/literature_notes/etat_art_action_publique_micro_adaptation_bilingue.md` | Main framework for état de l'art: action publique locale, urbanisme opérationnel, ZAN/SPR, commande publique, micro-adaptation |
 
 ## Local planning and report structure
 
