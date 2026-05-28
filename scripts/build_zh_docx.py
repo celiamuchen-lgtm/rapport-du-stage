@@ -61,6 +61,7 @@ def set_cell_text(cell, text, bold=False):
 def clean_inline(text):
     text = re.sub(r"`([^`]*)`", r"\1", text)
     text = re.sub(r"\*\*(.*?)\*\*", r"\1", text)
+    text = re.sub(r"\*(.*?)\*", r"\1", text)
     return text.strip()
 
 
