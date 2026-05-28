@@ -26,6 +26,12 @@ Pour générer le plan détaillé en PDF depuis LaTeX :
 .\scripts\build_latex_plan.cmd
 ```
 
+Pour générer le premier jet complet du rapport en PDF depuis LaTeX :
+
+```powershell
+.\scripts\build_latex_report.cmd
+```
+
 6. Synchroniser avec GitHub :
 
 ```powershell

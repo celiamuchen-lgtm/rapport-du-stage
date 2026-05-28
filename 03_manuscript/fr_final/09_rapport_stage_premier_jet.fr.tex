@@ -1,0 +1,448 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{longtable}
+\usepackage{array}
+
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\setlist[itemize]{leftmargin=1.4em, itemsep=0.2em}
+\setlist[enumerate]{leftmargin=1.6em, itemsep=0.2em}
+
+\definecolor{accent}{HTML}{1F5F6B}
+\definecolor{todored}{HTML}{A33A3A}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  pdftitle={Rapport de stage - premier jet},
+  pdfauthor={Ke Muchen}
+}
+
+\titleformat{\chapter}{\Huge\bfseries\color{accent}}{\thechapter}{0.8em}{}
+\titleformat{\section}{\Large\bfseries\color{accent}}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{0.8em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{0.8em}{}
+
+\newcommand{\todo}[1]{\textcolor{todored}{\textbf{TODO :} #1}}
+
+\title{
+  \textbf{De l'analyse socio-thermique à l'épreuve du terrain}\\
+  \large Comment l'ingénierie territoriale compose-t-elle avec l'urgence climatique et les hyper-contraintes d'un centre ancien ?
+}
+\author{
+  Ke Muchen\\
+  Master Ville et Environnement, parcours GEOPRAD\\
+  Université Côte d'Azur\\[0.5em]
+  Stage au sein de la Direction de l'Urbanisme\\
+  Mairie d'Antibes Juan-les-Pins
+}
+\date{Stage du 1er avril 2026 au 1er juillet 2026}
+
+\begin{document}
+
+\maketitle
+
+\chapter*{Avertissement sur ce premier jet}
+\addcontentsline{toc}{chapter}{Avertissement sur ce premier jet}
+
+Ce document constitue un premier jet de travail. Il fixe la structure générale, le fil argumentatif, les transitions principales et une première rédaction des parties centrales. Certains éléments doivent encore être complétés ou vérifiés : noms des encadrants, informations institutionnelles précises, références bibliographiques finales, données chiffrées issues des tableaux, cartes définitives et éventuelles contraintes de confidentialité sur les documents de commande publique.
+
+Les passages signalés par \todo{...} ne sont pas destinés à rester dans la version finale. Ils indiquent les informations à confirmer ou les développements à reprendre à partir des sources locales.
+
+\tableofcontents
+\newpage
+
+\chapter*{Introduction générale}
+\addcontentsline{toc}{chapter}{Introduction générale}
+
+\section*{Antibes face à une double exigence}
+\addcontentsline{toc}{section}{Antibes face à une double exigence}
+
+Dans les villes méditerranéennes, l'adaptation au changement climatique n'est plus un horizon abstrait. Elle se manifeste dans les usages quotidiens de l'espace public, dans la difficulté à marcher ou à attendre en plein été, dans la recherche d'ombre, dans la pression exercée sur les lieux touristiques et dans la nécessité de rendre les espaces urbains plus confortables sans perdre leur qualité patrimoniale. Antibes Juan-les-Pins constitue à cet égard un terrain particulièrement révélateur : ville littorale, touristique et patrimoniale, elle concentre des enjeux d'attractivité, de protection du cadre bâti, de qualité des espaces publics et d'adaptation aux épisodes de chaleur.
+
+Le centre ancien d'Antibes rend cette tension particulièrement visible. Il s'agit d'un espace déjà construit, dense, fortement pratiqué et soumis à des protections patrimoniales. Dans ce type de tissu, les marges de transformation sont limitées. L'action publique ne peut pas simplement appliquer des recettes générales de rafraîchissement urbain. Elle doit composer avec la rareté du foncier, les servitudes, les contraintes de gestion des espaces publics, les procédures de commande publique, les arbitrages budgétaires, les usages touristiques et les attentes des habitants. Le problème n'est donc pas seulement de savoir quelles solutions climatiques seraient souhaitables, mais de comprendre comment elles peuvent devenir réalisables.
+
+Ce rapport de stage part de cette tension. Il ne cherche pas à présenter Antibes comme un simple cas d'application d'une théorie générale de la ville durable. Il s'intéresse plutôt à la manière dont une direction municipale de l'urbanisme fabrique concrètement de l'action : par les diagnostics, les cartes, les réunions, les pièces de marché, les arbitrages techniques, les choix de méthode et les compromis successifs.
+
+\section*{Cadre du stage}
+\addcontentsline{toc}{section}{Cadre du stage}
+
+Le stage a été réalisé du 1er avril 2026 au 1er juillet 2026 au sein de la Direction de l'Urbanisme de la Mairie d'Antibes Juan-les-Pins, dans le cadre du Master Ville et Environnement, parcours GEOPRAD, à l'Université Côte d'Azur. Le positionnement adopté durant ce stage peut être décrit comme celui d'une \emph{stagiaire chargée d'études urbaines et SIG}. Les missions confiées ont combiné production de données, compréhension de documents de commande publique, participation à la vie des projets et exploration méthodologique autour du confort thermique urbain.
+
+Quatre ensembles de tâches structurent le rapport. Le premier concerne un diagnostic socio-démographique par SIG, mobilisant notamment des données INSEE, des unités IRIS, des données fiscales et des comparaisons multi-échelles. Le deuxième porte sur la compréhension et la contribution au travail autour de pièces de commande publique, notamment le CCTP et le CCAP liés à la requalification du secteur Guynemer et du cours Masséna dans le centre ancien d'Antibes. Le troisième relève de la participation à des réunions de projets urbains et techniques, notamment autour d'infrastructures énergétiques, qui ont permis d'observer la fabrique locale des projets. Le quatrième correspond à une démarche exploratoire, partiellement mise en oeuvre, autour du confort thermique piéton, des données fines, du street view, de l'IA, du Green View Index (GVI), du Sky View Factor (SVF) et de données LiDAR.
+
+\todo{Ajouter ici les noms du tuteur professionnel et du tuteur universitaire si la convention ou les usages du master le demandent.}
+
+\section*{Problématique}
+\addcontentsline{toc}{section}{Problématique}
+
+La problématique retenue est la suivante :
+
+\begin{quote}
+\emph{Comment l'ingénierie territoriale locale peut-elle articuler diagnostic socio-spatial, commande publique et outils d'analyse du confort thermique pour adapter un centre ancien méditerranéen aux enjeux climatiques ?}
+\end{quote}
+
+Cette question ne précède pas artificiellement le stage. Elle émerge de l'enchaînement des missions. Le diagnostic socio-démographique rend visibles les différenciations sociales et spatiales du territoire. L'analyse du CCTP et du CCAP montre comment les objectifs urbains doivent être traduits dans des documents opposables et exécutables. Les réunions de projets révèlent que l'urbanisme local est une pratique de coordination entre services, temporalités, budgets et contraintes techniques. Enfin, l'exploration du confort thermique piéton montre que les données agrégées, bien qu'utiles, restent insuffisantes pour prioriser finement les interventions à l'échelle de la rue.
+
+\section*{Annonce du plan}
+\addcontentsline{toc}{section}{Annonce du plan}
+
+La première partie construit le problème en présentant la structure d'accueil, le territoire antibois, le centre ancien et l'état de l'art. La deuxième partie rend compte de l'expérience de stage à travers les missions réalisées, les données mobilisées et les productions engagées. La troisième partie propose une analyse critique transversale : elle interroge la place du diagnostic, de la commande publique et des données fines dans l'adaptation climatique locale. La quatrième partie revient sur les compétences acquises, les limites rencontrées et les perspectives professionnelles ouvertes par ce stage.
+
+\chapter{Construire le problème : structure d'accueil, territoire, état de l'art et problématique}
+
+\section{La structure d'accueil : la Direction de l'Urbanisme d'Antibes Juan-les-Pins}
+
+\subsection{Identité institutionnelle et rôle de la mairie}
+
+La Mairie d'Antibes Juan-les-Pins constitue l'échelon de proximité à partir duquel se construisent de nombreuses actions d'urbanisme, d'aménagement et de gestion territoriale. À travers ses services, elle intervient à la fois dans la planification réglementaire, la coordination de projets, l'instruction et le suivi des transformations urbaines. La Direction de l'Urbanisme occupe une position particulière dans cet ensemble : elle se situe au croisement des orientations politiques, des documents réglementaires, des opérations concrètes et des contraintes quotidiennes du territoire.
+
+Dans une commune littorale et touristique comme Antibes, l'urbanisme municipal ne se limite pas à produire des règles. Il consiste également à organiser les conditions d'une transformation maîtrisée du territoire. Les projets doivent prendre en compte les dynamiques démographiques, les usages saisonniers, la pression foncière, la qualité des espaces publics, la protection patrimoniale et les objectifs environnementaux. Cette pluralité d'enjeux donne à la Direction de l'Urbanisme un rôle d'interface entre des ambitions générales et des situations opérationnelles souvent très situées.
+
+\todo{Compléter avec une présentation vérifiée de l'organisation interne de la Direction de l'Urbanisme : services, pôles, missions exactes et liens avec les autres directions.}
+
+\subsection{Organisation et missions de la Direction de l'Urbanisme}
+
+La Direction de l'Urbanisme peut être comprise comme un service de traduction : elle traduit des objectifs territoriaux en règles, en études, en projets et en documents utilisables par les acteurs de l'aménagement. Cette traduction ne se fait jamais de manière purement linéaire. Elle suppose des échanges avec les élus, les services techniques, les gestionnaires de réseaux, les bureaux d'études, les partenaires institutionnels, les services de l'État et les usagers.
+
+Dans le cadre du stage, cette dimension transversale est apparue à travers plusieurs situations. Le travail sur les données socio-démographiques relevait d'une logique de connaissance territoriale. Le travail sur les pièces de commande publique relevait d'une logique d'opérationnalisation. Les réunions de projets permettaient d'observer la manière dont une collectivité fait circuler l'information, anticipe les contraintes et arbitre entre plusieurs objectifs. La recherche appliquée sur le confort thermique ouvrait enfin une dimension plus prospective, liée à la capacité de la collectivité à se doter de données plus fines.
+
+\subsection{Positionnement de la stagiaire}
+
+Le stage n'a pas consisté en une simple observation de la structure. Il a placé la stagiaire dans une position hybride, entre analyse territoriale, appui à la compréhension des outils opérationnels et exploration méthodologique. Cette position correspond bien au profil d'une chargée d'études urbaines et SIG : elle suppose de manipuler des données, de produire des cartes, de comprendre des documents techniques et juridiques, mais aussi de replacer ces éléments dans une logique d'action publique.
+
+Cette hybridation constitue l'un des fils conducteurs du rapport. Le stage montre que les compétences attendues dans l'urbanisme contemporain ne se limitent ni au dessin de projet ni à l'analyse statistique. Elles reposent de plus en plus sur la capacité à articuler données, cadres réglementaires, instruments contractuels, contraintes budgétaires, enjeux climatiques et usages concrets de l'espace public.
+
+\section{Antibes Juan-les-Pins : un territoire méditerranéen sous tensions}
+
+\subsection{Un territoire attractif et touristique}
+
+Antibes Juan-les-Pins est une commune littorale de la Côte d'Azur, marquée par une forte attractivité résidentielle et touristique. Son image est associée au littoral, au patrimoine, aux activités estivales, aux espaces publics de promenade et à une forte intensité d'usage durant la saison chaude. Cette attractivité constitue une ressource territoriale, mais elle produit également des tensions : pression foncière, fréquentation élevée, exigences d'entretien des espaces publics, concurrence entre usages quotidiens et usages touristiques.
+
+Dans le contexte du changement climatique, cette intensité d'usage prend une signification nouvelle. Les périodes de chaleur concernent précisément les moments où l'espace public est le plus fréquenté. Les questions de confort piéton, d'ombre, de fraîcheur, de matérialité des sols et de continuité des parcours ne sont donc pas secondaires. Elles touchent à la fois la qualité de vie des habitants, l'expérience des visiteurs, la santé des populations vulnérables et l'attractivité de la ville.
+
+\todo{Ajouter ici des chiffres vérifiés : population communale, évolution démographique, part de résidences secondaires, données de fréquentation touristique si disponibles.}
+
+\subsection{Une structure démographique et sociale différenciée}
+
+L'analyse socio-démographique d'Antibes montre que le territoire ne peut pas être lu comme un espace homogène. Les caractéristiques de population, la structure par âge, la composition des ménages, les niveaux de revenus et les situations résidentielles varient selon les secteurs. Cette différenciation est importante pour un rapport portant sur l'adaptation climatique : l'exposition à la chaleur ne se traduit pas de la même manière selon les ressources, la mobilité, l'âge, le type de logement ou l'accès aux espaces frais.
+
+Dans cette perspective, le diagnostic socio-démographique ne constitue pas seulement un préalable statistique. Il permet de relier les politiques d'aménagement aux populations qui vivent, traversent ou utilisent les espaces concernés. Les données à l'échelle IRIS, les données de quartier, les données fiscales et les comparaisons avec d'autres échelles territoriales permettent de construire une lecture plus fine des vulnérabilités potentielles. Elles doivent toutefois être interprétées avec prudence, car la vulnérabilité sociale ne se confond pas directement avec l'exposition microclimatique.
+
+\subsection{Le centre ancien : un espace patrimonial et opérationnellement contraint}
+
+Le centre ancien d'Antibes concentre les enjeux les plus visibles du rapport. Il s'agit d'un espace dense, patrimonial, déjà construit et fortement pratiqué. Sa transformation ne peut pas être pensée comme celle d'un secteur d'extension urbaine. Les interventions y sont nécessairement limitées, négociées et encadrées. Les formes urbaines, les alignements, les façades, les matériaux, les usages commerciaux, les flux touristiques et les contraintes patrimoniales pèsent sur toute intervention.
+
+Le cadre du Site Patrimonial Remarquable (SPR) rappelle que certains espaces urbains ne peuvent pas être traités comme de simples supports techniques. La conservation, la restauration, la réhabilitation et la mise en valeur du patrimoine y présentent un intérêt public. Dans un tel contexte, l'adaptation climatique ne peut pas être réduite à la plantation d'arbres ou à l'ajout d'équipements. Elle doit composer avec les règles de protection, les avis spécialisés, les conditions d'instruction, la compatibilité des matériaux, la visibilité des dispositifs et la capacité à maintenir la qualité patrimoniale du lieu.
+
+Le centre ancien devient ainsi un laboratoire de l'urbanisme sous contraintes. Il révèle une question plus générale : comment agir sur l'existant lorsque les objectifs de rafraîchissement, de patrimonialisation, de fréquentation touristique, de qualité paysagère et de faisabilité technique ne convergent pas spontanément ?
+
+\subsection{Guynemer et Cours Masséna comme terrains opérationnels}
+
+Le projet de requalification du secteur Guynemer et du cours Masséna constitue l'un des terrains concrets à partir desquels le stage permet d'observer cette tension. Ces espaces appartiennent au centre ancien ou à ses abords immédiats et concentrent des enjeux d'image urbaine, de qualité des espaces publics, de parcours piéton, de fonctionnement quotidien et de mise en valeur patrimoniale.
+
+Leur intérêt pour le rapport tient au fait qu'ils obligent à passer d'une réflexion générale sur l'adaptation climatique à une écriture opérationnelle. Un objectif comme améliorer le confort d'été, renforcer la qualité piétonne ou adapter l'espace public doit être converti en mission de maîtrise d'oeuvre, en prescriptions, en critères et en livrables. C'est précisément dans ce passage que l'urbanisme opérationnel devient central.
+
+\section{État de l'art : action publique locale, urbanisme opérationnel et micro-adaptation climatique}
+
+\subsection{Action publique locale sous contraintes foncières, juridiques et budgétaires}
+
+La littérature récente sur l'action publique locale ne conduit pas à conclure à une disparition du pouvoir d'agir des collectivités. Elle invite plutôt à observer un déplacement de ses leviers. Les communes et intercommunalités disposent encore d'outils importants, mais elles agissent dans un cadre plus resserré : sobriété foncière, rareté du foncier disponible, tension budgétaire, complexité des procédures, multiplication des documents et nécessité d'articuler plusieurs politiques publiques.
+
+Le Zéro Artificialisation Nette (ZAN) illustre ce déplacement. En rendant plus difficile l'extension urbaine, il renforce l'importance de la transformation de la ville existante. Pour un centre ancien comme celui d'Antibes, cette orientation est particulièrement structurante : l'action publique ne peut pas se fonder sur l'ouverture de nouveaux espaces, mais sur la recomposition, la requalification, l'intensification sélective, la désimperméabilisation ponctuelle ou la renaturation de ce qui est déjà là.
+
+La contrainte foncière n'est pas seulement quantitative. Dans un centre ancien, elle est aussi parcellaire, juridique et opérationnelle. Les emprises publiques sont limitées, les propriétés privées nombreuses, les situations de copropriété fréquentes, et les interventions doivent souvent se glisser dans des opportunités modestes. Cette rareté de maîtrise foncière oblige à penser l'action publique non comme un grand geste de transformation, mais comme une capacité d'assemblage : requalification de voirie, traitement d'une placette, clauses dans un marché, convention ponctuelle, phasage ou expérimentation.
+
+À cette contrainte foncière s'ajoute une contrainte budgétaire. Les travaux récents sur les finances locales montrent une tension croissante entre dépenses de fonctionnement, recettes et capacité d'épargne. Même lorsqu'un projet est souhaitable, il doit être compatible avec la soutenabilité financière de la collectivité, les possibilités de subvention, les coûts de maintenance et le phasage des investissements. Pour Antibes, cette dimension invite à éviter une lecture naïve de l'adaptation climatique : la difficulté n'est pas seulement de savoir quoi faire, mais de savoir comment le financer, le prioriser et le maintenir.
+
+\todo{Insérer ici les références vérifiées : Ministère de la Transition écologique sur le ZAN, OFGL 2025, Fonds vert, portail de l'artificialisation.}
+
+\subsection{Spécificités méditerranéennes, centre ancien et empilement normatif}
+
+Dans le Vieux Antibes, l'action publique est également contrainte par la densité normative. Les règles d'urbanisme, les protections patrimoniales, les documents de planification, les objectifs climatiques et les règles de commande publique ne s'additionnent pas seulement comme un arrière-plan. Ils conditionnent la manière même de concevoir un projet.
+
+Le caractère méditerranéen du territoire accentue ces enjeux. Les chaleurs estivales, la fréquentation touristique, les usages piétons et la recherche d'ombre transforment le confort d'été en question de gestion urbaine. Mais dans un centre patrimonial, les solutions ne peuvent pas être choisies uniquement selon leur efficacité thermique. Elles doivent aussi être compatibles avec les vues, les matériaux, la qualité architecturale, les usages commerciaux, les réseaux existants et les procédures d'autorisation.
+
+Cette superposition explique pourquoi la difficulté des projets ne tient pas toujours à l'absence de diagnostic. Dans de nombreux cas, les objectifs sont connus : ombrager, désimperméabiliser, améliorer la qualité piétonne, limiter la surchauffe, préserver le patrimoine. Le problème réside dans la mise en compatibilité de ces objectifs. Le projet urbain devient alors un exercice d'arbitrage, de séquençage et de traduction réglementaire et opérationnelle.
+
+\subsection{Urbanisme opérationnel, commande publique et traduction contractuelle}
+
+L'urbanisme opérationnel peut être défini comme le moment où les orientations générales deviennent des actions faisables. Il ne s'agit pas d'une simple phase technique située après la planification. Il s'agit d'un espace de traduction, dans lequel les objectifs sont reformulés en programmes, missions, livrables, critères, responsabilités et délais.
+
+La commande publique joue ici un rôle central. Un objectif climatique n'a pas la même portée selon qu'il reste dans un document stratégique ou qu'il entre dans un CCTP, un CCAP, un DCE, un programme de maîtrise d'oeuvre ou un critère d'analyse des offres. Dans le premier cas, il reste une orientation. Dans le second, il devient potentiellement opposable, vérifiable et exécutable.
+
+Le CCTP porte la traduction technique des objectifs. Il peut préciser les attentes en matière d'ombrage, de perméabilité, de matériaux, de gestion de l'eau, de confort piéton, de végétalisation, de maintenance ou d'intégration patrimoniale. Le CCAP encadre plutôt les conditions administratives d'exécution : délais, modalités de coordination, pénalités, garanties, vérifications. Ensemble, ces pièces participent à la conversion d'une ambition urbaine en action publique réalisable.
+
+Cette lecture est particulièrement utile pour comprendre le stage. Le travail sur les pièces de marché n'est pas un exercice administratif secondaire. Il révèle la manière dont une collectivité transforme une intention en commande adressée à des prestataires, et donc la manière dont l'action publique se rend concrète.
+
+\subsection{Micro-adaptation climatique, données fines et confort piéton}
+
+L'adaptation climatique des centres anciens pose enfin une question d'échelle. Les données agrégées permettent d'identifier des tendances, mais elles ne suffisent pas toujours à décider où intervenir, comment prioriser les rues ou quelle solution choisir pour une séquence donnée. À l'échelle du Vieux Antibes, l'action peut se jouer sur une placette, un tronçon, un front bâti, un parcours piéton ou un point d'attente.
+
+Les démarches de micro-adaptation climatique insistent sur la nécessité d'un diagnostic fin. Les indicateurs classiques comme les IRIS, les cartes de température de surface, les données LCZ ou les données de végétation sont utiles pour repérer des secteurs. Mais ils ne décrivent pas toujours l'expérience du piéton : ombre réelle, ouverture au ciel, rayonnement reçu, présence visible de végétation, matériaux, obstacles, usages et temporalités.
+
+C'est dans ce cadre que des outils comme le Green View Index, le Sky View Factor, les données LiDAR, les images de rue, l'IA de segmentation ou les indices biométéorologiques comme PET et UTCI deviennent intéressants. Leur objectif n'est pas de remplacer le terrain ni la décision publique. Il est d'aider à classer les situations, à repérer les déficits d'ombre ou de végétation visible, à comprendre l'effet canyon, et à prioriser les interventions à une échelle compatible avec le projet d'espace public.
+
+Il faut également distinguer îlot de chaleur urbain et confort thermique piéton. Le premier renvoie à un phénomène thermique urbain plus général ; le second concerne l'expérience située d'un corps dans l'espace public, à un moment donné, sous certaines conditions d'ensoleillement, de vent, d'humidité, de rayonnement et d'activité. Dans un centre ancien méditerranéen, cette distinction est décisive : une rue peut rester chaude tout en devenant plus praticable si l'ombre, les matériaux ou les usages sont mieux organisés.
+
+\subsection{Synthèse critique de l'état de l'art}
+
+L'état de l'art conduit à une conclusion utile pour le rapport : le problème d'Antibes n'est pas l'impuissance de l'action publique locale. C'est le rétrécissement et la complexification de son espace d'action. La puissance publique dispose encore de leviers, mais ceux-ci se déplacent vers la priorisation, la coordination, la contractualisation, la recherche de financements, l'expérimentation, la micro-intervention et l'évaluation.
+
+Cette conclusion éclaire le titre du rapport. L'ingénierie territoriale ne résout pas les contraintes en les supprimant. Elle compose avec elles. Elle transforme des objectifs en diagnostics, des diagnostics en prescriptions, des prescriptions en marchés, des marchés en projets, puis des projets en apprentissages pour les opérations suivantes.
+
+\section{Construction de la problématique}
+
+À partir du contexte institutionnel, territorial et bibliographique, la problématique se stabilise autour d'une question centrale : comment articuler l'analyse socio-spatiale, les instruments de commande publique et les méthodes fines d'analyse du confort thermique dans un centre ancien méditerranéen ?
+
+Trois axes d'analyse structurent cette question. Le premier porte sur le rôle du diagnostic socio-démographique et SIG : que rend-il visible, et que laisse-t-il dans l'ombre ? Le deuxième porte sur la commande publique : comment les objectifs urbains et climatiques deviennent-ils des prescriptions techniques et administratives ? Le troisième porte sur les données fines de confort thermique : pourquoi deviennent-elles nécessaires lorsque l'action se déplace à l'échelle de la rue ?
+
+\chapter{L'expérience du stage : missions, méthodes, données et productions}
+
+\section{Mission 1 : diagnostic socio-démographique par SIG}
+
+\subsection{Objectifs de la mission}
+
+La première mission structurante a consisté à participer à un diagnostic socio-démographique par SIG. L'objectif n'était pas seulement de produire des cartes. Il s'agissait de mieux comprendre la structure sociale et démographique du territoire antibois, ses différenciations internes et les vulnérabilités potentielles susceptibles d'intéresser les politiques d'aménagement.
+
+Dans une perspective d'adaptation climatique, cette mission prend une importance particulière. Les risques liés à la chaleur ne se répartissent pas uniquement selon les formes urbaines ou les températures. Ils dépendent aussi des caractéristiques des populations : âge, isolement, revenus, type d'habitat, mobilité, accès aux aménités urbaines et capacité d'adaptation. La cartographie socio-démographique permet donc de préparer une lecture plus située des enjeux climatiques.
+
+\subsection{Données utilisées et échelles d'analyse}
+
+La mission a mobilisé plusieurs familles de données : données INSEE, découpages IRIS, données fiscales, données par quartiers et éléments de comparaison avec d'autres communes ou avec l'échelle départementale. Cette pluralité d'échelles constitue un point important. L'échelle communale donne une vue d'ensemble ; l'échelle IRIS permet une première différenciation infra-communale ; les quartiers permettent une lecture plus opérationnelle ; les comparaisons externes situent Antibes dans un contexte plus large.
+
+\todo{Insérer la liste précise des indicateurs utilisés : population, évolution, âge, ménages d'une personne, familles, revenus, résidences secondaires, etc.}
+
+\subsection{Méthode SIG et traitements réalisés}
+
+Le travail SIG a consisté à organiser les données, sélectionner des indicateurs, préparer les jointures, produire des cartes thématiques et construire des comparaisons lisibles. Les traitements ont permis de transformer des tableaux statistiques en représentations spatiales utiles pour l'analyse territoriale.
+
+La valeur de cette démarche tient à sa capacité à rendre visibles des contrastes qui restent peu perceptibles dans une lecture strictement tabulaire. Une carte ne prouve pas à elle seule une relation de causalité, mais elle permet de formuler des questions : où se concentrent certaines catégories de population ? Quels secteurs cumulent plusieurs indicateurs de fragilité ? Les secteurs étudiés dans le cadre de projets urbains correspondent-ils à des zones présentant des enjeux sociaux particuliers ?
+
+\todo{Préciser les logiciels effectivement utilisés : QGIS, ArcGIS Pro ou autre. Ajouter les cartes produites dans la version illustrée.}
+
+\subsection{Principaux résultats}
+
+Les premiers résultats du diagnostic confirment que la commune d'Antibes présente des différenciations socio-démographiques internes importantes. Le vieillissement, la présence de ménages d'une personne, les différences de revenus et la place des résidences secondaires constituent des dimensions à articuler avec la lecture urbaine du territoire.
+
+Ces résultats ne doivent pas être interprétés comme un diagnostic climatique direct. Ils constituent plutôt une couche de vulnérabilité ou de sensibilité potentielle. Pour passer d'une vulnérabilité sociale à une analyse de confort thermique, il faut croiser ces informations avec des données de morphologie urbaine, d'ombre, de végétation, de matériaux, de fréquentation et d'exposition.
+
+\subsection{Apports et limites de la mission}
+
+La mission a permis d'acquérir une meilleure compréhension du rôle du SIG dans une collectivité. Le SIG n'est pas seulement un outil de représentation ; il devient un outil de médiation entre données, territoire et décision. Il permet de rendre discutables des phénomènes qui restent sinon dispersés dans des tableaux.
+
+Ses limites sont toutefois importantes. L'échelle IRIS reste parfois trop large pour analyser un centre ancien. Les données fiscales doivent être interprétées avec prudence. Les cartes socio-démographiques ne disent pas directement où il fait chaud, ni comment les personnes ressentent l'espace public. Elles constituent donc un point de départ, non un résultat suffisant.
+
+\section{Mission 2 : CCTP/CCAP pour Guynemer et Cours Masséna}
+
+\subsection{Comprendre le rôle du CCTP et du CCAP}
+
+La deuxième mission importante a porté sur la compréhension et la contribution au travail autour des pièces de commande publique liées à la requalification du secteur Guynemer et du cours Masséna. Cette mission a permis d'entrer dans une dimension plus opérationnelle de l'urbanisme.
+
+Le CCTP, ou Cahier des Clauses Techniques Particulières, définit les attentes techniques adressées au prestataire. Le CCAP, ou Cahier des Clauses Administratives Particulières, encadre les conditions administratives du marché. Ensemble, ces documents traduisent un projet en obligations, missions, délais, livrables et responsabilités. Ils constituent donc une interface essentielle entre la maîtrise d'ouvrage publique et les acteurs chargés de produire les études ou les travaux.
+
+\subsection{Le projet de requalification du secteur Guynemer et du cours Masséna}
+
+Le projet de requalification du secteur Guynemer et du cours Masséna s'inscrit dans le centre ancien d'Antibes. Il touche à la qualité des espaces publics, au fonctionnement piéton, à l'image urbaine, aux usages quotidiens et touristiques, ainsi qu'à la capacité d'intégrer des objectifs environnementaux dans un tissu contraint.
+
+Le caractère opérationnel du projet est essentiel. Il ne s'agit pas seulement de dire que l'espace public doit être plus agréable ou mieux adapté au climat. Il faut préciser comment cette ambition sera étudiée, par qui, avec quels livrables, selon quelles contraintes, dans quels délais et selon quels critères.
+
+\subsection{Participation au travail de rédaction et d'analyse}
+
+La participation au travail de rédaction et d'analyse a consisté à lire des documents de référence, comprendre la structure des pièces de marché, identifier les formulations utiles et observer la manière dont une commande publique se construit. Ce travail a permis de prendre conscience de l'importance de l'écriture opérationnelle.
+
+\todo{Préciser le niveau exact de contribution : relecture, synthèse comparative, rédaction de passages, analyse d'exemples, préparation de tableaux, etc.}
+
+\subsection{Ce que cette mission révèle sur l'urbanisme opérationnel}
+
+Cette mission montre que l'urbanisme opérationnel est un travail d'ajustement. Les objectifs urbains et climatiques doivent être rendus compatibles avec des délais, un budget, un cadre patrimonial, des compétences attendues, des responsabilités contractuelles et des procédures de marché. Le CCTP devient ainsi un lieu où se négocie la possibilité même de l'action.
+
+Dans le cas d'Antibes, cette observation est décisive. L'adaptation climatique ne dépend pas seulement de la qualité des idées ou des diagnostics. Elle dépend aussi de la capacité à inscrire ces idées dans des documents qui obligent, orientent et vérifient l'action des prestataires.
+
+\section{Mission 3 : participation aux réunions de projets urbains et techniques}
+
+\subsection{Nature des réunions suivies}
+
+Le stage a également permis d'assister à des réunions de projets urbains et techniques, notamment autour d'infrastructures énergétiques. Ces réunions ont donné accès à une autre dimension du travail municipal : la coordination quotidienne des projets.
+
+Plutôt que de détailler des informations potentiellement sensibles, il convient ici de retenir ce que ces réunions révèlent du fonctionnement de l'action publique. Elles montrent que le projet urbain est un processus collectif, dans lequel les décisions se construisent progressivement à travers l'échange entre services, partenaires, contraintes techniques et objectifs politiques.
+
+\subsection{Comprendre la fabrique locale des projets}
+
+Les réunions observées montrent que l'urbanisme local se fabrique dans un ensemble d'arbitrages. Les questions techniques, calendaires, financières et réglementaires ne sont pas séparées les unes des autres. Une décision apparemment simple peut dépendre d'un calendrier de travaux, d'une contrainte de réseau, d'une disponibilité budgétaire, d'une coordination interservices ou d'un enjeu d'acceptabilité.
+
+Cette observation complète le travail sur le CCTP/CCAP. Les documents de marché formalisent l'action, mais ils ne suffisent pas à eux seuls. Le projet nécessite aussi des lieux de discussion, d'anticipation, de traduction et d'ajustement. La réunion devient ainsi un outil d'ingénierie territoriale.
+
+\subsection{Apports professionnels de cette participation}
+
+La participation à ces réunions a permis d'acquérir une meilleure compréhension du langage professionnel des collectivités. Elle a aussi montré l'importance de l'écoute, de la capacité à identifier les enjeux implicites et de la compréhension des temporalités administratives et techniques.
+
+Pour une stagiaire chargée d'études urbaines et SIG, cette expérience est importante : elle rappelle que les données et les cartes n'ont de valeur opérationnelle que si elles peuvent entrer dans des processus de décision, de coordination et de projet.
+
+\section{Mission 4 : démarche exploratoire sur le confort thermique piéton}
+
+\subsection{Origine de la démarche}
+
+La démarche exploratoire sur le confort thermique piéton s'inscrit dans la continuité des autres missions. Le diagnostic socio-démographique montre des différenciations de population ; le travail sur la commande publique montre la nécessité de formuler des prescriptions opérationnelles ; les réunions révèlent la complexité de la mise en oeuvre. À partir de là, une question apparaît : quelles données peuvent réellement aider à prioriser les interventions de rafraîchissement ou d'amélioration du confort à l'échelle de la rue ?
+
+\subsection{Données et outils envisagés ou partiellement mobilisés}
+
+La démarche mobilise ou envisage plusieurs outils : images de rue, IA de segmentation, Green View Index, Sky View Factor, données LiDAR, indicateurs de végétation, éventuellement indices biométéorologiques tels que PET ou UTCI. Elle doit être présentée comme une démarche exploratoire partiellement mise en oeuvre, et non comme un protocole complètement achevé.
+
+Son intérêt tient à la perspective piétonne. Les données vues du ciel décrivent la ville selon une logique de surface ; les images de rue et les indicateurs de visibilité permettent de s'approcher davantage de l'expérience vécue par les usagers.
+
+\subsection{Méthode générale}
+
+La méthode générale peut être décrite en plusieurs étapes : repérer les rues ou séquences à analyser ; collecter ou utiliser des images de rue ; segmenter les images pour identifier la végétation, le ciel, le bâti, le sol et d'autres éléments ; calculer des indicateurs comme le GVI ; croiser ces résultats avec des données de morphologie urbaine, de SVF ou de LiDAR ; interpréter les résultats en termes de priorisation.
+
+\todo{Compléter avec le protocole exact : nombre de points, distance entre points, nombre d'images par point, outils IA utilisés, méthode de calcul du GVI.}
+
+\subsection{Premiers apports et limites}
+
+Les apports de cette démarche sont importants. Elle permet de passer d'une lecture générale de la chaleur à une lecture plus fine des conditions de marche, d'ombre et de végétation visible. Elle peut aider à identifier des rues carencées en végétation perçue, des séquences très ouvertes au ciel, ou des espaces où une intervention ponctuelle pourrait avoir un effet important sur l'expérience piétonne.
+
+Les limites doivent être explicitement reconnues. Les images de rue peuvent être datées ou incomplètes. L'IA peut produire des erreurs de classification. Le GVI ne mesure pas directement la température ni le confort physiologique. Le SVF ou le LiDAR nécessitent des traitements techniques. Enfin, une démarche de ce type doit idéalement être complétée par des observations de terrain ou des mesures microclimatiques.
+
+\chapter{Analyse critique : de la commande publique aux données fines du confort thermique}
+
+\section{Le diagnostic territorial comme point de départ de l'action}
+
+\subsection{Ce que le SIG rend visible}
+
+Le SIG rend visibles les différenciations territoriales. Il permet de passer d'une connaissance générale de la commune à une lecture spatialisée des phénomènes sociaux. Dans le cas d'Antibes, il met en évidence des contrastes qui peuvent être utiles pour hiérarchiser les enjeux d'aménagement et d'adaptation.
+
+Cette visibilité est une condition de l'action publique. Une collectivité ne peut pas prioriser uniquement à partir d'impressions générales. Elle a besoin de supports de discussion, de cartes, d'indicateurs et de comparaisons pour objectiver les choix.
+
+\subsection{Ce que le SIG ne suffit pas à montrer}
+
+Le SIG ne suffit cependant pas à définir l'action. Les données socio-démographiques indiquent des sensibilités ou des vulnérabilités potentielles, mais elles ne décrivent pas l'exposition thermique réelle. Les découpages statistiques peuvent masquer les variations intra-quartier. Une carte peut également donner une impression de précision qui dépasse la qualité réelle des données.
+
+L'enjeu est donc de considérer le SIG comme une première couche de connaissance. Pour l'adaptation climatique, cette couche doit être croisée avec des informations sur les formes urbaines, les usages, les matériaux, l'ombre, la végétation et le confort piéton.
+
+\section{La commande publique comme traduction opérationnelle}
+
+\subsection{Du projet politique au document technique}
+
+La commande publique constitue l'un des lieux principaux où les ambitions deviennent opérationnelles. Un objectif formulé dans un discours politique ou dans un document stratégique ne produit pas nécessairement de transformation. Pour agir, il doit être intégré dans un programme, un cahier des charges, un marché, une mission de maîtrise d'oeuvre et des critères d'exécution.
+
+Le CCTP et le CCAP jouent ici un rôle de médiation. Ils rendent les attentes plus précises, plus vérifiables et plus transmissibles. Ils organisent la relation entre la maîtrise d'ouvrage publique et les prestataires. Ils peuvent donc être lus comme des instruments de l'action publique locale.
+
+\subsection{Les tensions entre ambition, faisabilité et temporalité}
+
+Cette traduction contractuelle n'efface pas les tensions. Au contraire, elle les rend visibles. Les ambitions climatiques doivent être compatibles avec le budget, les délais, le patrimoine, les réseaux, les procédures, les compétences disponibles et la maintenance future. La qualité d'un projet ne dépend donc pas seulement de l'ambition initiale, mais de la manière dont cette ambition est ajustée sans être vidée de son sens.
+
+Dans un centre ancien, ces tensions sont particulièrement fortes. Les solutions théoriquement efficaces ne sont pas toujours faisables. Les solutions faisables ne sont pas toujours les plus ambitieuses. L'ingénierie territoriale consiste précisément à construire des compromis opérationnels.
+
+\section{Pourquoi l'échelle piétonne devient centrale}
+
+\subsection{Les limites des données macroscopiques pour l'action locale}
+
+Les données macroscopiques sont indispensables pour comprendre les grandes tendances, mais elles restent insuffisantes pour agir à l'échelle d'un centre ancien. Une image thermique satellite, une donnée IRIS ou une classe LCZ permettent de repérer des situations générales. Elles ne disent pas toujours où planter, où ombrager, où changer un matériau, où créer une pause fraîche ou quel cheminement prioriser.
+
+Cette limite devient centrale lorsque le projet se situe à l'échelle du piéton. Le confort d'un usager dépend d'un ensemble de facteurs micro-locaux : rayonnement, ombre, vent, humidité, matériaux, largeur de rue, hauteur du bâti, végétation visible, temps d'attente, activité et perception.
+
+\subsection{GVI, SVF et IA comme outils complémentaires}
+
+Les indicateurs comme le GVI et le SVF ne doivent pas être présentés comme des solutions magiques. Ils sont des outils complémentaires d'aide à la décision. Le GVI permet d'évaluer la végétation visible depuis l'espace public. Le SVF donne une indication sur l'ouverture au ciel et donc sur certains mécanismes de rayonnement. Les images de rue et l'IA permettent d'automatiser une partie de l'observation.
+
+Leur intérêt pour Antibes est de rapprocher le diagnostic de l'échelle réelle de l'intervention. Dans un tissu ancien, quelques mètres peuvent modifier fortement l'expérience piétonne. Une approche fine permet donc de mieux classer les priorités, de justifier certaines prescriptions et de discuter les limites des données plus générales.
+
+\subsection{Une ingénierie territoriale par ajustements successifs}
+
+Le stage montre finalement que l'ingénierie territoriale fonctionne par ajustements successifs. Elle part d'un diagnostic, rencontre des contraintes, reformule des objectifs, produit des documents, participe à des réunions, cherche des données complémentaires, puis transforme progressivement les intentions en opérations.
+
+Cette logique correspond bien au verbe \emph{composer} dans le titre du rapport. Composer avec les contraintes ne signifie pas renoncer. Cela signifie reconnaître que l'action publique locale agit dans un champ de possibilités limité, et que sa compétence principale consiste à organiser ces possibilités pour produire malgré tout une transformation.
+
+\chapter{Bilan réflexif et perspectives professionnelles}
+
+\section{Compétences acquises}
+
+\subsection{Compétences techniques}
+
+Le stage a permis de renforcer plusieurs compétences techniques. La première concerne le SIG et l'analyse socio-démographique : manipulation de données, choix d'indicateurs, cartographie, lecture multi-échelle et interprétation territoriale. La deuxième concerne la compréhension de la commande publique : lecture de CCTP et CCAP, identification de la structure des pièces, compréhension des missions de maîtrise d'oeuvre. La troisième concerne les méthodes émergentes de confort thermique : GVI, SVF, LiDAR, images de rue et réflexion sur l'usage de l'IA.
+
+\subsection{Compétences professionnelles}
+
+Le stage a également développé des compétences professionnelles. Il a permis de comprendre le fonctionnement d'une collectivité, l'importance des réunions, la temporalité des projets, la coordination entre acteurs et la nécessité de produire des documents clairs. Il a aussi montré que la capacité à expliquer une donnée ou une carte à des acteurs non spécialistes est aussi importante que la production technique elle-même.
+
+\section{Regard critique sur le stage}
+
+\subsection{Les apports du stage}
+
+L'apport principal du stage tient à sa diversité. Les missions ont permis de circuler entre données, documents, réunions et recherche appliquée. Cette diversité a rendu visible la complexité de l'urbanisme local, qui ne peut pas être réduit à un seul métier ou à un seul outil.
+
+Le stage a aussi permis de relier la formation universitaire à des situations concrètes. Les notions de vulnérabilité, d'adaptation, de confort thermique, de commande publique ou d'action locale ont pris une dimension plus opérationnelle.
+
+\subsection{Les limites rencontrées}
+
+Plusieurs limites doivent être mentionnées. La durée du stage limite la possibilité d'achever une démarche complète de recherche appliquée sur le confort thermique. Certaines données restent à vérifier ou à compléter. Les méthodes fondées sur l'IA et le street view demandent une validation que le stage ne permet pas toujours de mener entièrement. Enfin, certains documents ou réunions peuvent comporter des informations sensibles, ce qui impose une prudence dans leur restitution.
+
+\subsection{Ce que cette expérience change dans ma compréhension de l'urbanisme}
+
+Cette expérience modifie la compréhension de l'urbanisme. Elle montre que l'urbanisme n'est pas seulement une discipline de conception ou de planification. C'est une pratique d'assemblage : assembler des données, des règles, des objectifs, des budgets, des procédures, des acteurs et des temporalités. Dans un contexte de changement climatique, cette capacité d'assemblage devient encore plus importante.
+
+\section{Perspectives professionnelles}
+
+\subsection{Approfondir le lien entre SIG, données et action publique}
+
+Le stage confirme l'intérêt d'un positionnement professionnel articulant SIG, diagnostic territorial et action publique. Les données spatiales peuvent aider les collectivités à mieux cibler leurs interventions, à discuter les priorités et à rendre plus lisibles les enjeux.
+
+\subsection{Approfondir les méthodes de confort thermique urbain}
+
+Les méthodes de confort thermique urbain constituent une perspective importante. Le GVI, le SVF, le LiDAR, les images de rue, les indices biométéorologiques et éventuellement la modélisation microclimatique peuvent enrichir les diagnostics d'espace public. Ils demandent toutefois une rigueur méthodologique et une capacité à expliquer leurs limites.
+
+\subsection{Se positionner comme profil hybride}
+
+À l'issue du stage, le profil professionnel qui se dessine est hybride : urbanisme opérationnel, SIG, adaptation climatique, données et compréhension de l'action publique locale. Ce positionnement semble particulièrement pertinent pour les collectivités confrontées à la nécessité d'adapter la ville existante plutôt que de produire seulement de nouveaux projets d'extension.
+
+\chapter*{Conclusion générale}
+\addcontentsline{toc}{chapter}{Conclusion générale}
+
+Ce premier jet permet de formuler une réponse provisoire à la problématique. L'ingénierie territoriale locale peut articuler diagnostic socio-spatial, commande publique et outils d'analyse du confort thermique à condition de ne pas les considérer comme des domaines séparés. Le diagnostic rend visibles les différenciations ; la commande publique transforme les objectifs en obligations ; les données fines permettent de rapprocher l'action de l'échelle réelle du piéton.
+
+Dans le centre ancien d'Antibes, l'enjeu n'est pas de trouver une solution unique à l'adaptation climatique. Il est de construire une capacité à composer avec les contraintes : foncier rare, patrimoine, usages touristiques, budgets, procédures, temporalités de projet et limites des données. Le stage montre que cette capacité se joue dans des actes très concrets : cartographier, comparer, rédiger, assister à des réunions, formuler des prescriptions, expérimenter des indicateurs et reconnaître les limites des méthodes.
+
+L'ouverture du rapport porte sur les centres anciens méditerranéens plus largement. Antibes n'est pas un cas isolé. De nombreuses villes patrimoniales, touristiques et déjà construites doivent aujourd'hui adapter leurs espaces publics à des étés plus chauds. Le croisement entre action publique locale, commande publique et micro-diagnostic climatique pourrait constituer une voie pertinente pour penser cette adaptation sans la réduire à un slogan.
+
+\chapter*{Bibliographie provisoire}
+\addcontentsline{toc}{chapter}{Bibliographie provisoire}
+
+\begin{itemize}
+  \item ADEME, \emph{Plus fraîche ma ville}. \todo{Vérifier date, URL et mode de citation.}
+  \item Cerema, ressources sur la surchauffe urbaine et l'adaptation des espaces publics. \todo{Compléter.}
+  \item Haut Conseil pour le climat, \emph{Rapport annuel 2024}. \todo{Vérifier titre complet.}
+  \item Ministère de la Culture, ressources sur les Sites patrimoniaux remarquables.
+  \item Ministère de la Transition écologique, ressources sur l'artificialisation des sols et le ZAN.
+  \item OFGL, \emph{Les finances des collectivités locales}, édition 2025.
+  \item Oke, T. R., travaux fondateurs sur l'îlot de chaleur urbain et le climat urbain.
+  \item Johansson, E., travaux sur la géométrie urbaine et le confort thermique extérieur.
+  \item Nikolopoulou, M. et Steemers, K., travaux sur le confort thermique et l'adaptation psychologique.
+  \item Li, X. et al., travaux sur le Green View Index et les images de rue.
+  \item Rzotkiewicz, A. et al., revue systématique sur l'usage de Google Street View.
+\end{itemize}
+
+\chapter*{Annexes à préparer}
+\addcontentsline{toc}{chapter}{Annexes à préparer}
+
+\begin{longtable}{p{0.27\textwidth} p{0.66\textwidth}}
+\textbf{Annexe prévue} & \textbf{Contenu à préparer}\\
+\hline
+Annexe 1 & Inventaire des principales sources utilisées.\\
+Annexe 2 & Tableau des indicateurs socio-démographiques.\\
+Annexe 3 & Cartes SIG sélectionnées et validées.\\
+Annexe 4 & Schéma méthodologique GVI/SVF/LiDAR.\\
+Annexe 5 & Structure synthétique ou extraits non confidentiels de documents de commande publique.\\
+\end{longtable}
+
+\end{document}

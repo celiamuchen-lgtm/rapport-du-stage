@@ -20,6 +20,7 @@ Dans PowerShell, depuis ce dossier :
 .\scripts\status.cmd
 .\scripts\build_docx.cmd
 .\scripts\build_latex_plan.cmd
+.\scripts\build_latex_report.cmd
 .\scripts\sync.cmd
 ```
 
