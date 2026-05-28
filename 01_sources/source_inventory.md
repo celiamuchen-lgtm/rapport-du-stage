@@ -33,6 +33,9 @@ This file records where source materials live. Large files are not copied into G
 |---|---|---|---|
 | Antibes GIS/research folder | Local folder | `D:\1xuexi\antibe` | Maps, QGIS projects, LCZ, LiDAR, ICU, cartopop |
 | Thermal comfort research project | Local folder | `D:\1xuexi\codex-apprendre\comforte thermique` | Literature review, methods, indicators, research design |
+| Thermal comfort test project | Local folder | `C:\Users\celia_xilanhua\Documents\confort thermique et icu\confort-thermique-test` | Earlier literature review, methodology notes, Antibes thermal comfort/ICU material |
+| Literature review draft | Markdown | `C:\Users\celia_xilanhua\Documents\confort thermique et icu\confort-thermique-test\09_thesis_draft\02_literature_review.md` | Reuse for état de l'art on UHI, outdoor thermal comfort, methods, inequality, planning responses |
+| Methodology notes | Local folder | `C:\Users\celia_xilanhua\Documents\confort thermique et icu\confort-thermique-test\05_methodology` | Reuse for indicator framework, LiDAR/SVF, thermal comfort method |
 | ICU data | CSV/QMD | `D:\1xuexi\antibe\confort thermique\antibes etudeicu.csv` | Example macro-scale heat indicator and limits |
 | LCZ SPOT Nice | GIS/PDF | `D:\1xuexi\antibe\lcz-spot-2022-nice` | Urban climate zoning context |
 
