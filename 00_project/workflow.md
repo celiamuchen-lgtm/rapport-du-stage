@@ -32,6 +32,12 @@ Pour générer le premier jet complet du rapport en PDF depuis LaTeX :
 .\scripts\build_latex_report.cmd
 ```
 
+Pour générer le brouillon chinois modifiable en Word :
+
+```powershell
+.\scripts\build_zh_docx.cmd
+```
+
 6. Synchroniser avec GitHub :
 
 ```powershell
