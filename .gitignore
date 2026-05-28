@@ -1,0 +1,25 @@
+# Generated outputs
+06_outputs/
+*.docx
+*.pdf
+*.tmp
+*.log
+
+# Office lock files
+~$*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Large local data should stay outside Git unless intentionally curated
+01_sources/raw_local_copies/
+04_figures/raw_exports/
